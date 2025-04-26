@@ -1,55 +1,73 @@
-# React + TypeScript + Vite
+# Modern Chatbot UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, fully responsive chatbot interface built with modular React components and Tailwind CSS. Designed for seamless integration on desktop and mobile, it offers dynamic appearance options and polished micro-interactions for a premium user experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive layout**  
+  Adapts automatically between single-column mobile view and two-column desktop view.
 
-## Expanding the ESLint configuration
+- **Theme support**  
+  Toggle between light, dark, and custom accent palettes via a built-in theme-switcher.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Clean header**  
+  Space for branding or logo alongside the theme toggle control.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Polished message bubbles**  
+  Rounded corners, subtle shadows, and distinct styles for user vs. bot messages.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Sticky input area**  
+  Always visible at the bottom, with placeholder text, send icon, and animated focus/hover states.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Micro-interactions**  
+  Fade-in of new messages, button ripple effect, and smooth scroll animations.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# chatbot-ui
+- **Modular architecture**  
+  Individual React components for ChatWindow, MessageBubble, InputArea, ThemeSwitcher, etc.
+
+## Getting Started
+
+1. **Add the package to your project**  
+   Use your preferred package manager to install the UI component library.
+
+2. **Wrap your application**  
+   Include the theme provider at the root level to enable color-theme switching.
+
+3. **Render the Chatbot component**  
+   Place the ChatWindow component wherever you want the chat interface to appear.
+
+## Theming
+
+- **Built-in palettes**  
+  Out-of-the-box light and dark modes ensure immediate usability.
+
+- **Custom accents**  
+  Supply a JSON theme definition to override primary, secondary, and background colors.
+
+- **Dynamic switching**  
+  ThemeSwitcher control in the header updates the look in real time without reloads.
+
+## Component Overview
+
+- **ChatWindow**  
+  Container for message flow and header controls.
+
+- **MessageBubble**  
+  Styled containers for individual messages, differentiating user and bot.
+
+- **InputArea**  
+  Controlled text input with send action and animated feedback.
+
+- **ThemeSwitcher**  
+  Toggle interface for cycling through available color themes.
+
+## Customization
+
+- **Styling**  
+  Tailwind utility classes can be overridden or extended via your project’s configuration.
+
+- **Behavior**  
+  Pass callback props to handle message send events, input validation, and theme-change hooks.
+
+- **Accessibility**  
+  All interactive elements include ARIA attributes and keyboard navigation support by default.
