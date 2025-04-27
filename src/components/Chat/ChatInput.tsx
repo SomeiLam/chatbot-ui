@@ -4,9 +4,10 @@ import { useTheme } from '../../context/ThemeContext'
 
 interface ChatInputProps {
   onSendMessage: (message: string) => void
+  isLoading?: boolean
 }
 
-const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage }) => {
+const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading }) => {
   const [message, setMessage] = useState('')
   const { theme, accentColor } = useTheme()
 
@@ -37,6 +38,8 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage }) => {
               ? ` text-white placeholder-gray-400  ${accentColor.darkChatBg}`
               : ` text-gray-800 placeholder-gray-500 ${accentColor.lightChatBg}`
           }`}
+          disabled={isLoading}
+          autoFocus
         />
         <button
           type="submit"
@@ -45,7 +48,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage }) => {
               ? 'opacity-50 cursor-not-allowed'
               : 'hover:shadow-md active:scale-95'
           } ${theme === 'dark' ? accentColor.darkBg : accentColor.lightBg}`}
-          disabled={message.trim() === ''}
+          disabled={message.trim() === '' || isLoading}
         >
           <Send className="h-5 w-5 text-white" />
         </button>

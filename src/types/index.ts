@@ -16,4 +16,5 @@ export interface AccentColor {
   lightChatBg: string
   darkChatBg: string
   focusRing: string
+  spinner: string
 }

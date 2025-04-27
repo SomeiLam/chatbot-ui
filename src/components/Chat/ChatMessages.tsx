@@ -5,9 +5,10 @@ import { useTheme } from '../../context/ThemeContext'
 
 interface ChatMessagesProps {
   messages: Message[]
+  isLoading: boolean
 }
 
-const ChatMessages: React.FC<ChatMessagesProps> = ({ messages }) => {
+const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, isLoading }) => {
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const { theme } = useTheme()
 
@@ -26,6 +27,23 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({ messages }) => {
         {messages.map((message) => (
           <ChatMessage key={message.id} message={message} />
         ))}
+
+        {isLoading && (
+          <div className="flex mb-2">
+            <span
+              className={`italic ${
+                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+              }`}
+            >
+              💬 Sikka is typing
+              <span className="ml-1">
+                <span className="typing-dot">.</span>
+                <span className="typing-dot">.</span>
+                <span className="typing-dot">.</span>
+              </span>
+            </span>
+          </div>
+        )}
         <div ref={messagesEndRef} />
       </div>
     </div>

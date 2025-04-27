@@ -18,6 +18,7 @@ const accentColorsData: AccentColor[] = [
     lightChatBg: 'bg-blue-50',
     darkChatBg: 'bg-indigo-900/50',
     focusRing: 'focus:ring-blue-500',
+    spinner: 'border-blue-500',
   },
   {
     name: 'purple',
@@ -28,6 +29,7 @@ const accentColorsData: AccentColor[] = [
     lightChatBg: 'bg-purple-50',
     darkChatBg: 'bg-purple-900/50',
     focusRing: 'focus:ring-purple-500',
+    spinner: 'border-purple-500',
   },
   {
     name: 'green',
@@ -38,6 +40,7 @@ const accentColorsData: AccentColor[] = [
     lightChatBg: 'bg-green-50',
     darkChatBg: 'bg-green-800/50',
     focusRing: 'focus:ring-green-500',
+    spinner: 'border-green-500',
   },
   {
     name: 'amber',
@@ -48,6 +51,7 @@ const accentColorsData: AccentColor[] = [
     lightChatBg: 'bg-amber-50',
     darkChatBg: 'bg-amber-900/25',
     focusRing: 'focus:ring-amber-500',
+    spinner: 'border-amber-500',
   },
 ]
 
