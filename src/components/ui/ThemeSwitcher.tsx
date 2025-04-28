@@ -1,10 +1,17 @@
 import React from 'react'
-import { Sun, Moon, Palette } from 'lucide-react'
+import {
+  Sun,
+  Moon,
+  // Palette
+} from 'lucide-react'
 import { useTheme } from '../../context/ThemeContext'
 
 const ThemeSwitcher: React.FC = () => {
-  const { theme, setTheme, accentColor, setAccentColor, accentColors } =
-    useTheme()
+  const {
+    theme,
+    setTheme,
+    // accentColor, setAccentColor, accentColors
+  } = useTheme()
 
   // Toggle between light and dark themes
   const toggleTheme = () => {
@@ -12,17 +19,17 @@ const ThemeSwitcher: React.FC = () => {
   }
 
   // Cycle through accent colors
-  const cycleAccentColor = () => {
-    const currentIndex = accentColors.findIndex(
-      (color) => color.name === accentColor.name
-    )
-    const nextIndex = (currentIndex + 1) % accentColors.length
-    setAccentColor(accentColors[nextIndex])
-  }
+  // const cycleAccentColor = () => {
+  //   const currentIndex = accentColors.findIndex(
+  //     (color) => color.name === accentColor.name
+  //   )
+  //   const nextIndex = (currentIndex + 1) % accentColors.length
+  //   setAccentColor(accentColors[nextIndex])
+  // }
 
   return (
     <div className="flex items-center space-x-2">
-      <button
+      {/* <button
         onClick={cycleAccentColor}
         className={`p-1.5 rounded-full transition-colors duration-300 ${
           theme === 'dark' ? 'hover:bg-gray-600' : 'hover:bg-gray-100'
@@ -34,7 +41,7 @@ const ThemeSwitcher: React.FC = () => {
             theme === 'dark' ? accentColor.darkText : accentColor.lightText
           }`}
         />
-      </button>
+      </button> */}
 
       <button
         onClick={toggleTheme}

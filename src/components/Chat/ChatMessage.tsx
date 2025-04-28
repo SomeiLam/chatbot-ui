@@ -38,11 +38,11 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
     >
       {/* Icon */}
       <div
-        className={`flex-shrink-0 p-2 rounded-2xl ${theme === 'dark' ? accentColor.darkChatBg : accentColor.lightChatBg}`}
+        className={`flex-shrink-0 p-2 rounded-full ${theme === 'dark' ? accentColor.darkChatBg : accentColor.lightChatBg}`}
       >
         {isUser ? (
           <User
-            className={`w-6 h-6 ${theme === 'dark' ? 'text-gray-300' : 'text-blue-600'}`}
+            className={`w-6 h-6 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}
           />
         ) : (
           <Bot
