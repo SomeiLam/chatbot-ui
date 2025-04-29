@@ -1,25 +1,26 @@
 export const agents = [
   {
     name: 'LinkedIn Post Generator',
-    description: 'Generate Social Media posts',
+    description: 'Generate social media post drafts tailored to your topic',
     color: 'blue',
     index: 0,
   },
   {
     name: 'Customer Support',
-    description: 'Answer customer inquiries',
+    description:
+      'Answer customer inquiries using only official Sikka.ai content',
     color: 'purple',
     index: 1,
   },
   {
     name: 'Task Event Planner',
-    description: 'Search for Event Venue',
+    description: 'Search for and recommend ideal event venues',
     color: 'green',
     index: 2,
   },
   {
     name: 'Customer Outreach Agent',
-    description: 'Generate Sales Emails',
+    description: 'Generate personalized sales email drafts',
     color: 'amber',
     index: 3,
   },

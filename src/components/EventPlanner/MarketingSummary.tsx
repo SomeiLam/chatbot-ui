@@ -10,7 +10,11 @@ const MarketingSummary: React.FC<MarketingSummaryProps> = ({
   marketingReport,
 }) => {
   const { theme } = useTheme()
+  const report = marketingReport
+    .replace(/^```[\r\n]*/, '')
+    .replace(/[\r\n]*```$/, '')
 
+  const markdown = report.replace(/\\n/g, '\n')
   return (
     <div className="p-6">
       <h3 className="text-xl font-semibold mb-4">Marketing Report</h3>
@@ -19,7 +23,7 @@ const MarketingSummary: React.FC<MarketingSummaryProps> = ({
           theme === 'dark' ? 'bg-gray-700' : 'bg-gray-50'
         }`}
       >
-        <Markdown markdown={marketingReport} />
+        <Markdown markdown={markdown} />
       </div>
     </div>
   )

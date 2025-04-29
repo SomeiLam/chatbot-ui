@@ -59,8 +59,17 @@ const EmailContainer = () => {
       }
 
       const data = await res.json()
-      console.log('data', data)
-      setEmail(data.email)
+      let emailText: string = data.email
+
+      // strip leading ```\n and trailing ```
+      if (emailText.startsWith('```')) {
+        // remove the opening fence
+        emailText = emailText.replace(/^```[\r\n]*/, '')
+        // remove the closing fence (and any trailing newlines)
+        emailText = emailText.replace(/[\r\n]*```$/, '')
+      }
+
+      setEmail(emailText)
       setShowReport(true)
     } catch (err) {
       console.error(err)
