@@ -24,14 +24,14 @@ const PostHeader = () => {
                 theme === 'dark' ? 'text-white' : 'text-gray-900'
               }`}
             >
-              Sikka
+              Amy AI
             </h3>
             <p
               className={`text-sm ${
                 theme === 'dark' ? 'text-gray-300' : 'text-gray-500'
               }`}
             >
-              Product Manager at Sikka
+              Product Manager at Amy AI
             </p>
           </div>
 

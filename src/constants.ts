@@ -7,8 +7,7 @@ export const agents = [
   },
   {
     name: 'Customer Support',
-    description:
-      'Answer customer inquiries using only official Sikka.ai content',
+    description: 'Answer customer inquiries using only official content',
     color: 'purple',
     index: 1,
   },

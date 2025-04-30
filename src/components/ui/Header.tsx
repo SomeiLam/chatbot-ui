@@ -21,9 +21,7 @@ const Header: React.FC<HeaderProps> = ({ agentIndex }) => {
     >
       <div className="flex items-center space-x-2">
         <AgentIcon agentIndex={agentIndex} />
-        <h2 className="font-semibold text-lg">
-          Sikka {agent?.name || 'Assistant'}
-        </h2>
+        <h2 className="font-semibold text-lg">{agent?.name || 'Assistant'}</h2>
       </div>
       <ThemeSwitcher />
     </div>

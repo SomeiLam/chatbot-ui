@@ -35,7 +35,7 @@ const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, isLoading }) => {
                 theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
               }`}
             >
-              💬 Sikka is typing
+              💬 Agent is typing
               <span className="ml-1">
                 <span className="typing-dot">.</span>
                 <span className="typing-dot">.</span>

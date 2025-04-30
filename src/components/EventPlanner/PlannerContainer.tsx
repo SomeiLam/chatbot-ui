@@ -7,9 +7,9 @@ import VenueSummary from './VenueSummary'
 import MarketingSummary from './MarketingSummary'
 
 const initialFormData: EventFormData = {
-  topic: 'Sikka AI Developer Summit',
+  topic: 'AI Developer Summit',
   description:
-    'A one-day, hands-on summit in San Jose bringing together software engineers, healthcare IT leaders, and practice management partners to dive deep into the Sikka ONE API, explore the latest DentalLLM and Insights features, and share best-practice integration patterns.',
+    'A one-day, hands-on summit in San Jose bringing together software engineers, healthcare IT leaders, and practice management partners to dive deep into the ONE API, explore the latest DentalLLM and Insights features, and share best-practice integration patterns.',
   city: 'San Jose, California',
   date: '2025-07-25',
   participants: 150,
