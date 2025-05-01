@@ -24,11 +24,14 @@ const PostContainer = () => {
     setIsLoading(true)
     setPost('')
     try {
-      const res = await fetch('http://localhost:8000/generate-post', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic }),
-      })
+      const res = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/generate-post`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topic }),
+        }
+      )
 
       if (!res.ok) {
         const errText = await res.text()

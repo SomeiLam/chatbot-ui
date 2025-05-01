@@ -52,11 +52,14 @@ const PlannerContainer = () => {
     }
 
     try {
-      const res = await fetch('http://localhost:8000/plan-event', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      })
+      const res = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/plan-event`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        }
+      )
 
       if (!res.ok) {
         const errText = await res.text()
